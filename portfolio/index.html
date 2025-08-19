@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio de Desarrollador Web</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="scrollable">
+  <header>
+    <h1>Mi Portfolio Web</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="about">
+      <h2>Sobre mí</h2>
+      <p>Soy un desarrollador web apasionado por la creación de experiencias digitales accesibles y eficientes.  Este portfolio demuestra el uso de HTML5, CSS moderno y características recientes de JavaScript.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Habilidades</h2>
+      <div class="skills-grid">
+        <article>
+          <h3>HTML5</h3>
+          <details>
+            <summary>Ver detalles</summary>
+            <p>Uso de etiquetas semánticas (`header`, `section`, `article`), formularios avanzados con tipos de entrada (`email`, `date`), integración de vídeo y audio nativos, y APIs como Geolocation, Web Storage y Web Workers.</p>
+          </details>
+        </article>
+        <article>
+          <h3>CSS Moderno</h3>
+          <details>
+            <summary>Ver detalles</summary>
+            <p>Diseño responsivo con Flexbox y Grid, variables CSS, `content-visibility` para rendimiento, personalización de barras de desplazamiento y controles (`accent-color`), y animaciones mediante transiciones.</p>
+          </details>
+        </article>
+        <article>
+          <h3>JavaScript</h3>
+          <details>
+            <summary>Ver detalles</summary>
+            <p>Manejo de DOM, programación asíncrona con `async/await` y Promises, uso de módulos ES, iteradores y Sets con métodos modernos (`intersection`, `difference`), y desarrollo con Node.js y frameworks como React.</p>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Proyectos</h2>
+      <div class="filters">
+        <button data-filter="todos" class="active">Todos</button>
+        <button data-filter="html">HTML</button>
+        <button data-filter="css">CSS</button>
+        <button data-filter="js">JavaScript</button>
+      </div>
+      <div class="projects-grid">
+        <article data-category="html">
+          <h3>Maquetado semántico</h3>
+          <p>Ejemplo de página con estructura semántica y formularios accesibles.</p>
+          <details><summary>Más información</summary><p>Este proyecto utiliza elementos `header`, `footer` y `form` con validación HTML5.</p></details>
+        </article>
+        <article data-category="css">
+          <h3>Diseño responsivo</h3>
+          <p>Uso de Flexbox y Grid para crear un layout adaptable.</p>
+          <details><summary>Más información</summary><p>Incluye personalización de barras de desplazamiento y animaciones suaves.</p></details>
+        </article>
+        <article data-category="js">
+          <h3>Aplicación interactiva</h3>
+          <p>Proyecto con filtros dinámicos y almacenamiento en el navegador.</p>
+          <details><summary>Más información</summary><p>Implementa geolocalización, localStorage y nuevas funciones de ECMAScript.</p></details>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contacto</h2>
+      <form id="contact-form">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre">
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required placeholder="Ingresa tu email">
+
+        <label for="date">Fecha de contacto:</label>
+        <input type="date" id="date" name="date">
+
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" required placeholder="Escribe tu mensaje"></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="geolocation">
+        <button id="get-location">Obtener mi ubicación</button>
+        <p id="location-output"></p>
+      </div>
+    </section>
+  </main>
+  <footer role="contentinfo">
+    <p>© 2025 Desarrollador Web – Portfolio.</p>
+  </footer>
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>
